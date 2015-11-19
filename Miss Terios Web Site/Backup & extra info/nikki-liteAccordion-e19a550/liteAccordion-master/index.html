@@ -1,0 +1,180 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>liteAccordion - a horizontal accordion plugin for jQuery</title>
+        <style>
+            /* css for this page */
+          
+            accfigure { display: block; width: 100%; height: 100%; margin: 0 }
+            figcaption { padding: 10px 15px; position: absolute; bottom: 20px; right: 30px; z-index: 3; background: black; background: rgba(0,0,0,0.7); color: white;
+                -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px }
+         
+
+        </style>
+
+        <!-- liteAccordion css -->
+        <link href="css/liteaccordion.css" rel="stylesheet" />
+
+
+
+        <!-- easing -->
+        <script src="jquery/jquery.easing.1.3.js"></script>
+        <!-- jQuery -->        
+        <script src="jquery/jquery.min.js"></script>
+        <!-- liteAccordion js -->
+        <script src="jquery/liteaccordion.jquery.js"></script>
+
+        <!--[if lt IE 9]>
+            <script>
+                document.createElement('accfigure');
+                document.createElement('figcaption');           
+            </script>
+        <![endif]-->  
+               
+    </head>
+    <body>
+        <div id="oneacc">
+            <ol>
+                <li>
+                    <h2><span>Slide One</span></h2>
+                    <div>
+                        <accfigure>
+                            <img src="img-demo/1.jpg" alt="image" />
+                            <figcaption>Assassini!</figcaption>
+                        </accfigure>
+                    </div>
+                </li>
+                <li>
+                    <h2><span>Slide Two</span></h2>
+                    <div>
+                        <accfigure>
+                            <img src="img-demo/2.jpg" alt="image" />
+                            <figcaption>Couldn't find an image of a Khajit thief! Fail!</figcaption>
+                        </accfigure>
+                    </div>
+                </li>
+                <li>
+                    <h2><span>Slide Three</span></h2>
+                    <div>
+                        <accfigure>
+                            <img src="img-demo/3.jpg" alt="image" />
+                            <figcaption>That's one angry looking red dude.</figcaption>
+                        </accfigure>
+                    </div>
+                </li>
+                <li>
+                    <h2><span>Slide Four</span></h2>
+                    <div>
+                        <accfigure>
+                            <img src="img-demo/4.jpg" width="768" alt="image" />
+                            <figcaption>Was fun for a couple of hours or so...</figcaption>
+                        </accfigure>
+                    </div>
+                </li>
+                <li>
+                    <h2><span>Slide Five</span></h2>
+                    <div>
+                        <accfigure>
+                            <img src="img-demo/5.jpg" alt="image" />
+                            <figcaption>Not as good as Hot Pursuit.</figcaption>
+                        </accfigure>
+                    </div>
+                </li>
+                 <li>
+                    <h2><span>Slide Six</span></h2>
+                    <div>
+                        <accfigure>
+                            <img src="img-demo/4.jpg" width="768" alt="image" />
+                            <figcaption>Was fun for a couple of hours or so...</figcaption>
+                        </accfigure>
+                    </div>
+                </li>
+                 <li>
+                    <h2><span>Slide Seven</span></h2>
+                    <div>
+                        <accfigure>
+                            <img src="img-demo/4.jpg" width="768" alt="image" />
+                            <figcaption>Was fun for a couple of hours or so...</figcaption>
+                        </accfigure>
+                    </div>
+                </li>
+                 <li>
+                    <h2><span>Slide Eight</span></h2>
+                    <div>
+                        <accfigure>
+                            <img src="img-demo/4.jpg" width="768" alt="image" />
+                            <figcaption>Was fun for a couple of hours or so...</figcaption>
+                        </accfigure>
+                    </div>
+                </li>
+                 <li>
+                    <h2><span>Slide Nine</span></h2>
+                    <div>
+                        <accfigure>
+                            <img src="img-demo/4.jpg" width="768" alt="image" />
+                            <figcaption>Was fun for a couple of hours or so...</figcaption>
+                        </accfigure>
+                    </div>
+                </li>
+            </ol>
+          
+        </div>
+
+       
+
+       
+        <!-- liteAccordion demos, social & analytics -->
+        <script>
+            (function($, d) {
+                // please don't copy and paste this page
+                // it breaks my analytics!
+                
+                // demos
+                $('#oneacc').liteAccordion({
+                        onTriggerSlide : function() {
+                            this.find('figcaption').fadeOut();
+                        },
+                        onSlideAnimComplete : function() {    
+                            this.find('figcaption').fadeIn();
+                        },
+                        autoPlay : false,
+                        pauseOnHover : false,
+                        theme : 'stitch',
+                        rounded : true,
+                        enumerateSlides : false                  
+                }).find('figcaption:first').show();
+              
+                // social links
+                var js, id = 'facebook-jssdk'; 
+
+                if (d.getElementById(id)) return;
+
+                js = d.createElement('script'); 
+                js.id = id; 
+                js.async = true;
+                js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+                d.getElementsByTagName('head')[0].appendChild(js);
+
+                // Load Plus One Button
+                jQuery.getScript('https://apis.google.com/js/plusone.js');
+                // Load Tweet Button Script
+                jQuery.getScript('https://platform.twitter.com/widgets.js');
+                // Load LinkedIn button
+                jQuery.getScript('https://platform.linkedin.com/in.js?v=2');                
+            })(jQuery, document);
+
+            // analytics
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-17442910-1']);
+            _gaq.push(['_trackPageview']);
+
+            (function() {
+                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            })();
+        </script>
+
+    </body>
+</html>
